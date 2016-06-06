@@ -6,4 +6,5 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
     ],
+    'timeZone'=>'Asia/Chongqing',//设置时区
 ];
