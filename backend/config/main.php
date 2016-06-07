@@ -14,6 +14,7 @@ return [
     'modules' => [
         'admin' => [
             'class' => 'mdm\admin\Module',
+//              'layout' => 'left-menu',//yii2-admin的导航菜单
         ]
     ],
     "aliases" => [
@@ -51,6 +52,20 @@ return [
                 // add a lot of actions here until you finally completed setting up rbac,
                 // otherwise you may not even take a first step.
             ]
+        ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-advanced-app'
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-blue',
+                ],
+            ],
         ],
         //需要去除indx.php  打开此注释
         'urlManager' => [
