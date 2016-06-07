@@ -63,7 +63,15 @@
                 ],
             ]
         ) ?>
-
+<?php
+use yii\bootstrap\Nav;
+use mdm\admin\components\MenuHelper;
+    echo Nav::widget([
+            "encodeLabels" => false,
+            "options" => ["class" => "sidebar-menu"],
+            "items" => MenuHelper::getAssignedMenu(Yii::$app->user->id),
+        ]
+    );?>
     </section>
 
 </aside>
